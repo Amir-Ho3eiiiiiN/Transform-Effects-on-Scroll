@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Transform Effects on Scroll</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <h1>Transform Effects on Scroll</h1>
+      <span class="curve">
+        <img src="curve.png" />
+      </span>
+    </section>
+    <script type="text/javascript">
+      var scroll = document.querySelector(".curve");
+      window.addEventListener("scroll", function () {
+        var value = 1 + window.scrollY / -400;
+        scroll.style.transform = `scaleY(${value})`;
+      });
+    </script>
+  </body>
+</html>
